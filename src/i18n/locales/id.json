@@ -1,0 +1,349 @@
+{
+  "locale-switcher": {
+    "title": "Pengalih Bahasa",
+    "select-language": "Pilih Bahasa",
+    "english": "Inggris",
+    "indonesia": "Indonesia"
+  },
+  "menu-data": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "blog": "Blog",
+    "blogs": "Blog",
+    "explore": "Jelajahi",
+    "contact": "Kontak",
+    "profile": "Profil",
+    "docs": "Dokumentasi",
+    "dashboard": "Dasbor",
+    "manage": "Kelola"
+  },
+  "external": {
+    "page-not-exist": "Halaman Ini Tidak Ada",
+    "page-not-exist-description": "Halaman yang Anda cari tampaknya telah dipindahkan, dihapus, atau tidak ada.",
+    "go-back-home": "Kembali ke Beranda",
+    "go-to-home": "Pergi ke Beranda",
+    "error-title": "Terjadi Kesalahan",
+    "error-description": "Maaf, ada yang tidak beres. Silakan coba lagi nanti.",
+    "go-back": "Kembali",
+    "contact-support": "Hubungi Dukungan",
+    "not-found": "Tidak Ditemukan",
+    "not-found-title": "Kami Tidak Dapat Menemukan Halaman yang Anda Cari",
+    "not-found-description": "Halaman yang Anda cari mungkin telah dihapus, namanya diubah, atau sementara tidak tersedia.",
+    "unauthorized": "Tidak Sah",
+    "unauthorized-title": "Anda Tidak Memiliki Izin untuk Mengakses Halaman Ini",
+    "unauthorized-description": "Silakan masuk dengan kredensial yang sesuai untuk mengakses halaman ini.",
+    "forbidden": "Terlarang",
+    "forbidden-title": "Akses ke Halaman Ini Terlarang",
+    "forbidden-description": "Anda tidak memiliki izin yang diperlukan untuk melihat halaman ini.",
+    "internal-server-error": "Kesalahan Server Internal",
+    "internal-server-error-title": "Ups! Ada yang Salah di Pihak Kami",
+    "internal-server-error-description": "Kami sedang berupaya memperbaiki masalah ini. Silakan coba lagi nanti."
+  },
+  "auth": {
+    "slogan": "Bergabunglah dengan kami dan mulai perjalanan digital Anda hari ini!",
+    "login": "Masuk",
+    "register": "Daftar",
+    "logout": "Keluar",
+    "login-to-your-account": "Masuk ke Akun Anda",
+    "register-a-new-account": "Daftar Akun Baru",
+    "continue-with-google": "Lanjutkan dengan Google",
+    "continue-with-facebook": "Lanjutkan dengan Facebook",
+    "continue-with-github": "Lanjutkan dengan GitHub",
+    "create-your-account": "Buat Akun Anda",
+    "login-description": "Selamat datang kembali! Silakan masukkan detail Anda untuk masuk ke akun Anda.",
+    "register-description": "Bergabunglah dengan kami hari ini! Silakan isi detail di bawah ini untuk membuat akun Anda.",
+    "or-continue-with": "Atau lanjutkan dengan",
+    "dont-have-an-account": "Belum punya akun?",
+    "already-have-an-account": "Sudah punya akun?",
+    "login-here": "Masuk di sini",
+    "register-here": "Daftar di sini",
+    "email-address": "Alamat Email",
+    "password": "Kata Sandi",
+    "confirm-password": "Konfirmasi Kata Sandi",
+    "forgot-password": "Lupa Kata Sandi",
+    "forgot-your-password": " Anda lupa kata sandi?",
+    "request-password-reset": "Minta Reset Kata Sandi",
+    "password-reset-description": "Masukkan email Anda untuk meminta pengaturan ulang kata sandi.",
+    "send-reset-email": "Kirim email pengaturan ulang",
+    "new-password-title": "Tetapkan kata sandi baru",
+    "new-password-description": "Masukkan kata sandi baru Anda",
+    "remember-me": "Ingat Saya",
+    "remember-me-for": "Ingat saya selama",
+    "day": "Hari",
+    "days": "Hari",
+    "reset-password": "Atur Ulang Kata Sandi",
+    "by-registering": "Dengan mendaftar, Anda menyetujui",
+    "terms-of-service": "Syarat Layanan",
+    "and": "dan",
+    "privacy-policy": "Kebijakan Privasi",
+    "name": "Nama Lengkap",
+    "terms-and-privacy": "Dengan mendaftar, Anda menyetujui Syarat Layanan dan Kebijakan Privasi kami.",
+    "ready-to-launch": "Siap untuk memulai?",
+    "ready-to-launch-description": "Pengaturan hanya memerlukan beberapa menit. Isi detailnya dan Anda siap untuk pergi.",
+    "need-help": "Butuh bantuan?",
+    "need-help-description": "Lihat dokumentasi atau hubungi dukungan kami.",
+    "build-with-love": "Dibangun dengan ❤️",
+    "all-rights-reserved": "Hak Cipta Dilindungi."
+  },
+  "hero": {
+    "title": "Solusi Teknologi Inovatif untuk Dunia Digital",
+    "description": "Kami membangun perangkat lunak yang mendorong bisnis Anda maju dengan menciptakan masa depan web dengan pengembangan mutakhir, kode cerdas, desain yang mulus, dan solusi yang dapat diskalakan.",
+    "get-started": "Coba Sekarang",
+    "contact-us": "Kontak Kami",
+    "learn-more": "Pelajari Lebih Lanjut"
+  },
+  "breadcrumb": {
+    "home": "Beranda"
+  },
+  "footer": {
+    "description": "Doavers adalah penyedia solusi teknologi yang berdedikasi untuk memberikan layanan inovatif dan andal kepada bisnis dan individu di dunia digital.",
+    "quick-links": "Tautan Cepat",
+    "services": "Layanan",
+    "about-us": "Tentang Kami",
+    "contact": "Kontak",
+    "follow-us": "Ikuti Kami",
+    "rights-reserved": "Hak Cipta Dilindungi.",
+    "home": "Beranda",
+    "features": "Fitur",
+    "portfolio": "Portofolio",
+    "about": "Tentang",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "testimonials": "Testimoni",
+    "privacy-policy": "Kebijakan Privasi",
+    "terms-of-service": "Syarat Layanan",
+    "refund-policy": "Kebijakan Pengembalian",
+    "legal-notice": "Somasi",
+    "sitemap": "Peta Situs",
+    "careers": "Karir",
+    "support": "Dukungan",
+    "useful-links": "Tautan Berguna",
+    "our-products": "Produk Kami",
+    "company": {
+      "brand-name": "Doavers"
+    },
+    "unsubscribe": "Berhenti berlangganan",
+    "build-with-love": "Dibangun dengan ❤️",
+    "copyright": "Hak Cipta",
+    "all-rights-reserved": "Semua hak dilindungi undang-undang"
+  },
+  "features": {
+    "subtitle": "Fitur Unggulan",
+    "title": "Sistem Pengenalan Gambar Berbasis AI",
+    "paragraph": "Mengembangkan sistem pengenalan gambar canggih menggunakan teknik pembelajaran mendalam, mampu mengidentifikasi objek dengan akurasi tinggi. Proyek ini menunjukkan keahlian saya dalam computer vision dan AI."
+  },
+  "features-data": {
+    "btn": "Lebih Lanjut",
+    "1": {
+      "title": "Pengembangan Aplikasi Kustom",
+      "paragraph": "Solusi web atau mobile yang dibuat sesuai kebutuhan untuk menyesuaikan dengan proses bisnis dan tujuan unik Anda, menggunakan teknologi terbaru."
+    },
+    "2": {
+      "title": "Desain Responsif",
+      "paragraph": "Aplikasi Anda akan terlihat hebat dan berfungsi dengan mulus di perangkat apa pun, dari desktop hingga ponsel."
+    },
+    "3": {
+      "title": "Integrasi API",
+      "paragraph": "Menghubungkan sistem Anda dengan layanan dan platform pihak ketiga secara mulus untuk meningkatkan fungsionalitas."
+    },
+    "4": {
+      "title": "Solusi E-commerce",
+      "paragraph": "Menciptakan platform e-commerce yang kuat dan dapat diskalakan yang memberikan pengalaman berbelanja yang luar biasa bagi pelanggan Anda."
+    },
+    "5": {
+      "title": "Layanan Cloud",
+      "paragraph": "Memanfaatkan teknologi cloud untuk membangun solusi yang dapat diskalakan, aman, dan hemat biaya yang tumbuh bersama bisnis Anda."
+    },
+    "6": {
+      "title": "Optimisasi SEO",
+      "paragraph": "Meningkatkan visibilitas situs web Anda di mesin pencari melalui strategi SEO yang terbukti dan praktik terbaik."
+    },
+    "7": {
+      "title": "Pemeliharaan & Dukungan",
+      "paragraph": "Menyediakan pemeliharaan dan dukungan berkelanjutan untuk memastikan aplikasi Anda tetap mutakhir, aman, dan berkinerja optimal."
+    },
+    "8": {
+      "title": "Arsitektur yang Dapat Diskalakan",
+      "paragraph": "Membangun sistem dengan pertumbuhan masa depan dalam pikiran, memastikan infrastruktur Anda dapat menangani peningkatan permintaan dengan mudah."
+    }
+  },
+  "about-us": {
+    "title": "Tentang Kami",
+    "job-title": "Pengembang Full Stack & Penggemar Computer Vision",
+    "description": "Di Doavers, kami berkomitmen untuk memberikan solusi teknologi inovatif yang memberdayakan bisnis dan individu di dunia digital. Dengan pengalaman bertahun-tahun dalam pengembangan web, hosting, dan layanan domain, kami memahami kebutuhan unik pelanggan kami dan berusaha untuk memberikan layanan terbaik yang melebihi harapan mereka.",
+    "we-have": "Kami Memiliki",
+    "years-of-experience": "Tahun Pengalaman",
+    "know-more": "Ketahui Lebih Lanjut",
+    "mission-title": "Misi Kami",
+    "mission-description": "Misi kami adalah menyediakan solusi teknologi yang andal, aman, dan terjangkau yang membantu pelanggan kami mencapai tujuan digital mereka. Kami berfokus pada inovasi, kualitas, dan layanan pelanggan untuk memastikan kesuksesan jangka panjang bagi bisnis dan individu yang kami layani.",
+    "vision-title": "Visi Kami",
+    "vision-description": "Visi kami adalah menjadi penyedia solusi teknologi terkemuka yang dikenal karena inovasi, keandalan, dan layanan pelanggan yang luar biasa. Kami berusaha untuk menciptakan masa depan web yang lebih baik dengan memberdayakan bisnis dan individu untuk berkembang di dunia digital."
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "description": "Kami menawarkan berbagai layanan untuk memenuhi kebutuhan teknologi Anda, mulai dari pengembangan web hingga solusi cloud. Tim ahli kami berdedikasi untuk memberikan hasil berkualitas tinggi yang mendorong bisnis Anda maju.",
+    "explore-our-services": "Jelajahi Layanan Kami",
+    "explore-our-portfolio": "Jelajahi Portofolio Kami",
+    "explore-our": "Jelajahi tentang",
+    "latest-projects": "Proyek Terbaru Kami",
+    "portfolio-description": "Kami bukan hanya pengembang; Kami adalah penenun mimpi digital. Menciptakan pengalaman online yang imersif bukan hanya pekerjaan tetapi panggilan saya. Temukan di bawah bagaimana saya dapat membantu Anda.",
+    "service-list": {
+      "1": {
+        "title": "Pengembangan Web",
+        "description": "Membangun situs web yang responsif dan ramah pengguna yang melibatkan audiens Anda dan mendorong konversi."
+      },
+      "2": {
+        "title": "Pengembangan Mobile App",
+        "description": "Menciptakan aplikasi mobile yang intuitif dan kaya fitur untuk platform iOS dan Android."
+      },
+      "3": {
+        "title": "Solusi Cloud",
+        "description": "Menawarkan layanan cloud yang dapat diskalakan dan aman untuk meningkatkan operasi bisnis Anda."
+      },
+      "4": {
+        "title": "Solusi E-commerce",
+        "description": "Mengembangkan platform e-commerce yang kuat yang menyediakan pengalaman berbelanja yang mulus."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portofolio Kami",
+    "description": "Lihat beberapa proyek terbaru kami yang menunjukkan keahlian kami dalam pengembangan web, aplikasi mobile, dan solusi teknologi lainnya. Kami bangga dengan pekerjaan kami dan berkomitmen untuk memberikan hasil berkualitas tinggi kepada klien kami.",
+    "view-all-projects": "Lihat Semua Proyek",
+    "tags": {
+      "all": "Semua",
+      "web": "Pengembangan Web",
+      "mobile": "Aplikasi Mobile",
+      "api": "Pengembangan API",
+      "cloud": "Solusi Cloud",
+      "e-commerce": "E-commerce"
+    },
+    "project-list": {
+      "1": {
+        "title": "Situs Web E-commerce untuk Bisnis Ritel",
+        "description": "Sebuah platform e-commerce yang dirancang khusus untuk bisnis ritel, menampilkan desain yang menarik dan fungsionalitas yang mudah digunakan."
+      },
+      "2": {
+        "title": "Sistem Manajemen Konten (CMS) untuk Blog",
+        "description": "Sebuah CMS yang kuat dan mudah digunakan yang memungkinkan blogger untuk mengelola konten mereka dengan efisien."
+      },
+      "3": {
+        "title": "Platform Manajement Aset Digital",
+        "description": "Sebuah platform manajemen aset digital yang membantu bisnis mengatur, menyimpan, dan berbagi aset digital mereka dengan mudah."
+      },
+      "4": {
+        "title": "Kontent dan Media Generator Berbasis AI",
+        "description": "Sebuah asisten AI canggih yang membantu pengguna menghasilkan konten, kode, gambar, dan video dengan mudah dan efisien."
+      }
+    }
+  },
+  "call-to-action": {
+    "title": "Ayo, cari apa lagi?",
+    "get-started-now": "Mulai Sekarang",
+    "description": "Siap membawa bisnis Anda ke level berikutnya dengan solusi teknologi inovatif kami? Hubungi kami hari ini untuk mendiskusikan proyek Anda dan temukan bagaimana kami dapat membantu Anda mencapai tujuan digital Anda.",
+    "contact-us": "Hubungi Kami"
+  },
+  "testimonials": {
+    "title": "Apa Kata Klien Kami?",
+    "subtitle": "Testimoni",
+    "description": "Dengar dari klien kami yang puas tentang pengalaman mereka bekerja dengan kami dan bagaimana solusi kami telah membantu bisnis mereka berkembang.",
+    "testimonial-list": {
+      "1": {
+        "name": "Jane Doe",
+        "position": "CEO, Tech Innovations",
+        "feedback": "Doavers mentransformasi kehadiran online kami dengan situs web yang memukau dan platform e-commerce yang lancar. Tim mereka profesional, responsif, dan sungguh peduli dengan kesuksesan kami."
+      },
+      "2": {
+        "name": "John Smith",
+        "position": "Founder, Startup Hub",
+        "feedback": "Aplikasi mobile yang dikembangkan oleh Doavers telah menjadi pengubah permainan bagi bisnis kami. Pengalaman pengguna sangat fantastis, dan kami telah melihat pertumbuhan signifikan dalam keterlibatan pengguna."
+      },
+      "3": {
+        "name": "Emily Johnson",
+        "position": "Marketing Manager, Creative Solutions",
+        "feedback": "Solusi cloud Doavers telah meningkatkan efisiensi operasional dan skalabilitas kami. Keahlian dan dukungan mereka sangat berharga bagi tim kami."
+      }
+    }
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "FAQ",
+    "description": "Temukan jawaban untuk pertanyaan umum tentang layanan kami, proses, dan bagaimana kami dapat membantu bisnis Anda.",
+    "faq-list": {
+      "1": {
+        "question": "Layanan apa saja yang Anda tawarkan?",
+        "answer": "Kami menawarkan berbagai layanan termasuk pengembangan web, pengembangan aplikasi mobile, solusi cloud, platform e-commerce, optimisasi SEO, dan banyak lagi."
+      },
+      "2": {
+        "question": "Berapa lama waktu yang dibutuhkan untuk proyek typical?",
+        "answer": "Garis waktu untuk sebuah proyek bervariasi tergantung pada kompleksitas dan ruang lingkupnya. Kami bekerja sama dengan klien kami untuk menetapkan garis waktu yang realistis dan memastikan pengiriman tepat waktu."
+      },
+      "3": {
+        "question": "Teknologi apa yang Anda kuasai?",
+        "answer": "Kami menguasai berbagai teknologi termasuk JavaScript, React, Node.js, Python, AWS, dan banyak lagi. Tim kami selalu mengikuti tren industri terbaru untuk menyediakan solusi mutakhir."
+      },
+      "4": {
+        "question": "Bagaimana Anda memastikan kualitas pekerjaan Anda?",
+        "answer": "Kami mengikuti praktik terbaik dalam pengembangan, melakukan pengujian menyeluruh, dan menjaga komunikasi terbuka dengan klien kami sepanjang proyek untuk memastikan hasil berkualitas tinggi."
+      },
+      "5": {
+        "question": "Apakah Anda menyediakan dukungan dan pemeliharaan berkelanjutan?",
+        "answer": "Ya, kami menawarkan layanan dukungan dan pemeliharaan berkelanjutan untuk memastikan aplikasi Anda tetap mutakhir, aman, dan berkinerja optimal."
+      },
+      "6": {
+        "question": "Bagaimana saya bisa memulai dengan layanan Anda?",
+        "answer": "Anda dapat memulai dengan menghubungi kami melalui situs web atau email kami. Kami akan mendiskusikan kebutuhan proyek Anda dan memberikan solusi yang disesuaikan untuk memenuhi kebutuhan Anda."
+      }
+    }
+  },
+  "blog": {
+    "title": "Dari Blog Kami",
+    "subtitle": "Artikel Terbaru",
+    "description": "Tetap terupdate dengan tren, tips, dan wawasan terbaru di dunia teknologi melalui blog kami. Artikel kami mencakup berbagai topik untuk membantu Anda tetap terinformasi dan selangkah lebih maju.",
+    "read-more": "Baca Selengkapnya",
+    "loading": "Memuat postingan...",
+    "load-more": "Muat Lebih Banyak",
+    "no-more-posts": "Tidak ada postingan lagi yang tersedia.",
+    "related-posts": "Postingan Terkait"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami Ingin Mendengar Dari Anda",
+    "description": "Apakah Anda memiliki pertanyaan, membutuhkan informasi lebih lanjut, atau siap memulai proyek? Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda dengan kebutuhan teknologi Anda.",
+    "company": {
+      "brand-name": "Doavers",
+      "legal-name": "PT. Djagad Kreasi Indonesia",
+      "address": "Bellezza BSA 1st Floor Unit 106",
+      "address1": "Jl. Letjen Soepeno, Permata Hijau",
+      "subdistrict": "Grogol Utara",
+      "district": "Kebayoran Lama",
+      "city": "South Jakarta",
+      "state": "Jakarta",
+      "country": "Indonesia",
+      "zip-code": "12210",
+      "phone": "+62 (878) 8384-6677",
+      "email": "admin@doavers.com"
+    },
+    "our-location": "Lokasi Kami",
+    "how-can-we-help": "Bagaimana Kami Bisa Membantu?",
+    "send-us-a-message": "Kirim Kami Pesan",
+    "name": "Nama Lengkap",
+    "name-placeholder": "Nama Anda",
+    "email": "Email",
+    "email-placeholder": "email@anda.com",
+    "phone": "Telepon",
+    "phone-placeholder": "+62 822 0822 0822",
+    "subject": "Subjek",
+    "subject-placeholder": "Develop Website",
+    "message": "Pesan",
+    "message-placeholder": "Ketikan pesan Anda disini",
+    "send-message": "Kirim Pesan",
+    "success-message": "Terima kasih telah menghubungi kami! Kami akan merespons secepatnya.",
+    "error-message": "Terjadi kesalahan saat mengirim pesan Anda. Silakan coba lagi nanti.",
+    "unsubscribe": "Berhenti berlangganan",
+    "copyright": "Hak Cipta",
+    "all-rights-reserved": "Semua hak dilindungi undang-undang."
+  }
+}

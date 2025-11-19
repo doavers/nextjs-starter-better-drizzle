@@ -1,0 +1,210 @@
+/* Documentation styles */
+.doc-content {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Code blocks */
+.doc-content pre {
+  @apply my-4 overflow-x-auto rounded-lg bg-gray-100 p-4 dark:bg-gray-800;
+}
+
+.doc-content code {
+  @apply font-mono text-sm;
+}
+
+/* Inline code */
+.doc-content :not(pre) > code {
+  @apply rounded bg-gray-100 px-1 py-0.5 text-sm dark:bg-gray-800;
+}
+
+/* Headers */
+.doc-content h1 {
+  @apply mt-8 mb-6 border-b border-gray-200 pb-4 text-3xl font-bold text-gray-900 dark:border-gray-700 dark:text-white;
+}
+
+.doc-content h2 {
+  @apply mt-8 mb-4 text-2xl font-bold text-gray-900 dark:text-white;
+}
+
+.doc-content h3 {
+  @apply mt-6 mb-3 text-xl font-semibold text-gray-900 dark:text-white;
+}
+
+.doc-content h4 {
+  @apply mt-4 mb-2 text-lg font-medium text-gray-900 dark:text-white;
+}
+
+/* Paragraphs */
+.doc-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+/* Links */
+.doc-content a {
+  @apply text-blue-600 underline transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300;
+}
+
+/* Lists */
+.doc-content ul {
+  @apply mb-4 list-inside list-disc space-y-2;
+}
+
+.doc-content ol {
+  @apply mb-4 list-inside list-decimal space-y-2;
+}
+
+.doc-content li {
+  @apply ml-4;
+}
+
+/* Blockquotes */
+.doc-content blockquote {
+  @apply my-4 border-l-4 border-gray-300 pl-4 text-gray-600 italic dark:border-gray-600 dark:text-gray-400;
+}
+
+/* Tables */
+.doc-content table {
+  @apply my-4 w-full border-collapse border border-gray-300 dark:border-gray-600;
+}
+
+.doc-content th {
+  @apply border border-gray-300 bg-gray-50 px-4 py-2 text-left font-semibold dark:border-gray-600 dark:bg-gray-800;
+}
+
+.doc-content td {
+  @apply border border-gray-300 px-4 py-2 dark:border-gray-600;
+}
+
+/* Mermaid diagrams */
+.doc-content .mermaid {
+  @apply my-8 text-center;
+}
+
+.doc-content .mermaid svg {
+  @apply h-auto max-w-full;
+}
+
+/* Alert/Callout styles */
+.doc-content .alert {
+  @apply mb-4 rounded-lg border-l-4 p-4;
+}
+
+.doc-content .alert-info {
+  @apply border-blue-500 bg-blue-50 text-blue-800 dark:bg-blue-900/20 dark:text-blue-200;
+}
+
+.doc-content .alert-warning {
+  @apply border-yellow-500 bg-yellow-50 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-200;
+}
+
+.doc-content .alert-error {
+  @apply border-red-500 bg-red-50 text-red-800 dark:bg-red-900/20 dark:text-red-200;
+}
+
+.doc-content .alert-success {
+  @apply border-green-500 bg-green-50 text-green-800 dark:bg-green-900/20 dark:text-green-200;
+}
+
+/* Syntax highlighting */
+.hljs {
+  @apply bg-transparent;
+}
+
+.hljs-comment,
+.hljs-quote {
+  @apply text-gray-500 italic dark:text-gray-400;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  @apply font-semibold text-purple-600 dark:text-purple-400;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.hljs-string,
+.hljs-doctag {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  @apply font-semibold text-red-600 dark:text-red-400;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  @apply font-semibold text-yellow-600 dark:text-yellow-400;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  @apply font-normal text-red-600 dark:text-red-400;
+}
+
+.hljs-regexp,
+.hljs-link {
+  @apply text-cyan-600 dark:text-cyan-400;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  @apply text-cyan-600 dark:text-cyan-400;
+}
+
+.hljs-meta {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.hljs-deletion {
+  @apply bg-red-100 dark:bg-red-900/20;
+}
+
+.hljs-addition {
+  @apply bg-green-100 dark:bg-green-900/20;
+}
+
+.hljs-emphasis {
+  @apply italic;
+}
+
+.hljs-strong {
+  @apply font-bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doc-content h1 {
+    @apply mt-6 mb-4 text-2xl;
+  }
+
+  .doc-content h2 {
+    @apply mt-6 mb-3 text-xl;
+  }
+
+  .doc-content h3 {
+    @apply mt-4 mb-2 text-lg;
+  }
+
+  .doc-content pre {
+    @apply text-xs;
+  }
+
+  .doc-content table {
+    @apply text-sm;
+  }
+}

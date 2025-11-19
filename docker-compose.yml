@@ -1,0 +1,28 @@
+services:
+  nextjs-starter-better-drizzle:
+    image: ghcr.io/doavers/nextjs-starter-better-drizzle:0.1.0
+    container_name: nextjs-starter-better-drizzle
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      # HostPort:ContainerPort
+      - 3000:3000
+    networks:
+      - prod_network
+
+  extra-tags:
+    extends: nextjs-starter-better-drizzle
+    image: ghcr.io/doavers/nextjs-starter-better-drizzle:0.1
+
+  latest:
+    extends: nextjs-starter-better-drizzle
+    image: ghcr.io/doavers/nextjs-starter-better-drizzle:latest
+
+# Add more containers below (nginx, postgres, etc.)
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  prod_network:
+    external: true
