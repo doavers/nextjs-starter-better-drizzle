@@ -1,0 +1,349 @@
+{
+  "locale-switcher": {
+    "title": "Language Switcher",
+    "select-language": "Select Language",
+    "english": "English",
+    "indonesia": "Indonesia"
+  },
+  "menu-data": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "blogs": "Blogs",
+    "explore": "Explore",
+    "contact": "Contact",
+    "profile": "Profile",
+    "docs": "Docs",
+    "dashboard": "Dashboard",
+    "manage": "Manage"
+  },
+  "external": {
+    "page-not-exist": "This Page Does Not Exist",
+    "page-not-exist-description": "The page you were looking for appears to have been moved, deleted or does not exist.",
+    "go-back-home": "Go Back Home",
+    "go-to-home": "Go to Home",
+    "error-title": "Something Went Wrong",
+    "error-description": "An unexpected error has occurred. Please try again later or contact support if the issue persists.",
+    "go-back": "Go Back",
+    "contact-support": "Contact Support",
+    "not-found": "Not Found",
+    "not-found-title": "We Can't Seem to Find the Page You're Looking For",
+    "not-found-description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "unauthorized": "Unauthorized",
+    "unauthorized-title": "You Do Not Have Permission to Access This Page",
+    "unauthorized-description": "Please log in with the appropriate credentials to access this page.",
+    "forbidden": "Forbidden",
+    "forbidden-title": "Access to This Page is Forbidden",
+    "forbidden-description": "You do not have the necessary permissions to view this page.",
+    "internal-server-error": "Internal Server Error",
+    "internal-server-error-title": "Oops! Something Went Wrong on Our End",
+    "internal-server-error-description": "We're working to fix the issue. Please try again later."
+  },
+  "auth": {
+    "slogan": "Secure and Seamless Access to Your Account",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "login-to-your-account": "Login to Your Account",
+    "register-a-new-account": "Register a New Account",
+    "continue-with-google": "Continue with Google",
+    "continue-with-facebook": "Continue with Facebook",
+    "continue-with-github": "Continue with GitHub",
+    "create-your-account": "Create Your Account",
+    "login-description": "Welcome back! Please enter your details to log in to your account.",
+    "register-description": "Join us today! Please fill in the details below to create your account.",
+    "or-continue-with": "Or continue with",
+    "dont-have-an-account": "Don't have an account?",
+    "already-have-an-account": "Already have an account?",
+    "login-here": "Login here",
+    "register-here": "Register here",
+    "email-address": "Email Address",
+    "password": "Password",
+    "confirm-password": "Confirm Password",
+    "forgot-password": "Forgot Password",
+    "forgot-your-password": "Forgot your password?",
+    "request-password-reset": "Request Password Reset",
+    "password-reset-description": "Input your email to request password reset",
+    "send-reset-email": "Send reset email",
+    "new-password-title": "Set a new password",
+    "new-password-description": "Input your new password",
+    "remember-me": "Remember Me",
+    "remember-me-for": "Remember Me for",
+    "day": "Day",
+    "days": "Days",
+    "reset-password": "Reset Password",
+    "by-registering": "By registering, you agree to our",
+    "terms-of-service": "Terms of Service",
+    "and": "and",
+    "privacy-policy": "Privacy Policy",
+    "name": "Full Name",
+    "terms-and-privacy": "With your registration, you agree to our Terms of Service and Privacy Policy.",
+    "ready-to-launch": "Ready to launch?",
+    "ready-to-launch-description": "Setup takes only a few minutes. Just fill in the details and you're ready to go.",
+    "need-help": "Need help?",
+    "need-help-description": "Check out the docs or contact our support.",
+    "build-with-love": "Built with ❤️",
+    "all-rights-reserved": "All rights reserved."
+  },
+  "hero": {
+    "title": "Innovative Tech Solutions for a Digital World",
+    "description": "We build software that drives your business forward by creating the future of the web with cutting-edge development, smart code, seamless design, and scalable solutions.",
+    "get-started": "Get Started",
+    "contact-us": "Contact Us",
+    "learn-more": "Learn More"
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "footer": {
+    "description": "Doavers is a tech solutions provider dedicated to delivering innovative and reliable services to businesses and individuals in the digital world.",
+    "quick-links": "Quick Links",
+    "services": "Services",
+    "about-us": "About Us",
+    "contact": "Contact",
+    "follow-us": "Follow Us",
+    "rights-reserved": "All rights reserved.",
+    "home": "Home",
+    "features": "Features",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "testimonials": "Testimonials",
+    "privacy-policy": "Privacy Policy",
+    "terms-of-service": "Terms of Service",
+    "refund-policy": "Refund Policy",
+    "legal-notice": "Legal Notice",
+    "sitemap": "Sitemap",
+    "careers": "Careers",
+    "support": "Support",
+    "useful-links": "Useful Links",
+    "our-products": "Our Products",
+    "company": {
+      "brand-name": "Doavers"
+    },
+    "unsubscribe": "Unsubscribe",
+    "build-with-love": "Built with ❤️",
+    "copyright": "Copyright",
+    "all-rights-reserved": "All rights reserved"
+  },
+  "features": {
+    "subtitle": "Featured Project",
+    "title": "AI-Powered Image Recognition System",
+    "paragraph": "Developed an advanced image recognition system using deep learning techniques, capable of identifying objects with high accuracy. This project showcases my expertise in computer vision and AI."
+  },
+  "features-data": {
+    "btn": "Learn More",
+    "1": {
+      "title": "Custom App Development",
+      "paragraph": "Tailor-made web or mobile solutions built to align with your unique business processes and goals, utilizing the latest technologies."
+    },
+    "2": {
+      "title": "UI/UX Responsive Design",
+      "paragraph": "Ensuring your applications look great and function seamlessly on any device, from desktops to mobile phones."
+    },
+    "3": {
+      "title": "API Integration",
+      "paragraph": "Seamlessly connecting your systems with third-party services and platforms to enhance functionality."
+    },
+    "4": {
+      "title": "E-commerce Solutions",
+      "paragraph": "Creating robust and scalable e-commerce platforms that provide an exceptional shopping experience for your customers."
+    },
+    "5": {
+      "title": "Cloud Services",
+      "paragraph": "Leveraging cloud technologies to build scalable, secure, and cost-effective solutions that grow with your business."
+    },
+    "6": {
+      "title": "SEO Optimization",
+      "paragraph": "Improving your website's visibility on search engines through proven SEO strategies and best practices."
+    },
+    "7": {
+      "title": "Maintenance & Support",
+      "paragraph": "Providing ongoing maintenance and support to ensure your applications remain up-to-date, secure, and performing optimally."
+    },
+    "8": {
+      "title": "Scalable Architecture",
+      "paragraph": "Building systems with future growth in mind, ensuring your infrastructure can handle increased demand with ease."
+    }
+  },
+  "about-us": {
+    "title": "About Us",
+    "job-title": "Full Stack Developer & Computer Vision Enthusiast",
+    "description": "At Doavers, we are committed to delivering innovative tech solutions that empower businesses and individuals in the digital world. With years of experience in web development, hosting, and domain services, we understand the unique needs of our clients and strive to provide the best service that exceeds their expectations.",
+    "we-have": "We Have",
+    "years-of-experience": "Years of Experience",
+    "know-more": "Know More",
+    "mission-title": "Our Mission",
+    "mission-description": "Our mission is to provide reliable, secure, and affordable tech solutions that help our clients achieve their digital goals. We focus on innovation, quality, and customer service to ensure long-term success for the businesses and individuals we serve.",
+    "vision-title": "Our Vision",
+    "vision-description": "Our vision is to be a leading provider of tech solutions known for innovation, reliability, and exceptional customer service. We aim to create a better future for the web by empowering businesses and individuals to thrive in the digital world."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer a wide range of services to meet your tech needs, from web development to cloud solutions. Our team of experts is dedicated to delivering high-quality results that drive your business forward.",
+    "explore-our-services": "Explore Our Services",
+    "explore-our-portfolio": "Explore Our Portfolio",
+    "explore-our": "Explore Our",
+    "latest-projects": "Latest Projects",
+    "portfolio-description": "We're not just a developer; We’re digital dreamweaver. Crafting immersive online experiences is not just a job but my calling. Discover below how I can help you.",
+    "service-list": {
+      "1": {
+        "title": "Web Development",
+        "description": "Building responsive and user-friendly websites that engage your audience and drive conversions."
+      },
+      "2": {
+        "title": "Mobile App Development",
+        "description": "Creating intuitive and feature-rich mobile applications for iOS and Android platforms."
+      },
+      "3": {
+        "title": "Cloud Solutions",
+        "description": "Offering scalable and secure cloud services to enhance your business operations."
+      },
+      "4": {
+        "title": "E-commerce Solutions",
+        "description": "Developing robust e-commerce platforms that provide seamless shopping experiences."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Explore our portfolio to see the innovative projects we've delivered for our clients. From web development to mobile apps, our work showcases our commitment to quality and excellence.",
+    "view-all-projects": "View All Projects",
+    "tags": {
+      "all": "All",
+      "web": "Web Development",
+      "mobile": "Mobile Apps",
+      "api": "API Development",
+      "cloud": "Cloud Solutions",
+      "e-commerce": "E-commerce"
+    },
+    "project-list": {
+      "1": {
+        "title": "E-commerce Website for Retail Business",
+        "description": "Developed a responsive e-commerce website with a user-friendly interface, secure payment gateway, and seamless shopping experience."
+      },
+      "2": {
+        "title": "Content Management System (CMS) for Blog",
+        "description": "Created a customizable blog platform with an easy-to-use content management system (CMS) for effortless content creation and management."
+      },
+      "3": {
+        "title": "Web Digital Asset Management Platform",
+        "description": "Built a robust digital asset management platform to help businesses organize, store, and share their digital assets efficiently."
+      },
+      "4": {
+        "title": "Content and Media AI Generation Tool",
+        "description": "Developed an AI-powered tool to assist with content creation, code generation, image generation, video generation, and other tasks, enhancing productivity and creativity."
+      }
+    }
+  },
+  "call-to-action": {
+    "title": "What Are You Looking For?",
+    "get-started-now": "Get Started Now",
+    "description": "Ready to take your business to the next level with our innovative tech solutions? Contact us today to discuss your project and discover how we can help you achieve your digital goals.",
+    "contact-us": "Contact Us"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say?",
+    "subtitle": "Testimonials",
+    "description": "Hear from our satisfied clients about their experiences working with us and how our solutions have helped their businesses grow.",
+    "testimonial-list": {
+      "1": {
+        "name": "Jane Doe",
+        "position": "CEO, Tech Innovations",
+        "feedback": "Doavers transformed our online presence with a stunning website and seamless e-commerce platform. Their team is professional, responsive, and truly cares about our success."
+      },
+      "2": {
+        "name": "John Smith",
+        "position": "Founder, Startup Hub",
+        "feedback": "The mobile app developed by Doavers has been a game-changer for our business. The user experience is fantastic, and we've seen significant growth in user engagement."
+      },
+      "3": {
+        "name": "Emily Johnson",
+        "position": "Marketing Manager, Creative Solutions",
+        "feedback": "Doavers' cloud solutions have improved our operational efficiency and scalability. Their expertise and support have been invaluable to our team."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "FAQ",
+    "description": "Find answers to common questions about our services, processes, and how we can help your business.",
+    "faq-list": {
+      "1": {
+        "question": "What services do you offer?",
+        "answer": "We offer a wide range of services including web development, mobile app development, cloud solutions, e-commerce platforms, SEO optimization, and more."
+      },
+      "2": {
+        "question": "How long does a typical project take?",
+        "answer": "The timeline for a project varies depending on its complexity and scope. We work closely with our clients to establish realistic timelines and ensure timely delivery."
+      },
+      "3": {
+        "question": "What technologies do you specialize in?",
+        "answer": "We specialize in a variety of technologies including JavaScript, React, Node.js, Python, AWS, and more. Our team stays up-to-date with the latest industry trends to provide cutting-edge solutions."
+      },
+      "4": {
+        "question": "How do you ensure the quality of your work?",
+        "answer": "We follow best practices in development, conduct thorough testing, and maintain open communication with our clients throughout the project to ensure high-quality results."
+      },
+      "5": {
+        "question": "Do you provide ongoing support and maintenance?",
+        "answer": "Yes, we offer ongoing support and maintenance services to ensure your applications remain up-to-date, secure, and performing optimally."
+      },
+      "6": {
+        "question": "How can I get started with your services?",
+        "answer": "You can get started by contacting us through our website or email. We'll discuss your project requirements and provide a tailored solution to meet your needs."
+      }
+    }
+  },
+  "blog": {
+    "title": "From Our Blog",
+    "subtitle": "Latest Articles",
+    "description": "Stay updated with the latest trends, tips, and insights in the tech world through our blog. Our articles cover a wide range of topics to help you stay informed and ahead of the curve.",
+    "read-more": "Read More",
+    "loading": "Loading posts...",
+    "load-more": "Load More",
+    "no-more-posts": "No more posts available.",
+    "related-posts": "Related Posts"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get In Touch",
+    "description": "We'd love to hear from you! Whether you have a question about our services, need assistance, or want to discuss a project, feel free to reach out to us.",
+    "company": {
+      "brand-name": "Doavers",
+      "legal-name": "PT. Djagad Kreasi Indonesia",
+      "address": "Bellezza BSA 1st Floor Unit 106",
+      "address1": "Jl. Letjen Soepeno, Permata Hijau",
+      "subdistrict": "Grogol Utara",
+      "district": "Kebayoran Lama",
+      "city": "Jakarta Selatan",
+      "state": "Jakarta",
+      "country": "Indonesia",
+      "zip-code": "12210",
+      "phone": "+62 (878) 8384-6677",
+      "email": "admin@doavers.com"
+    },
+    "our-location": "Our Location",
+    "how-can-we-help": "How Can We Help You?",
+    "send-us-a-message": "Send Us a Message",
+    "name": "Full Name",
+    "name-placeholder": "Your Name",
+    "email": "Email",
+    "email-placeholder": "your@email.com",
+    "phone": "Phone",
+    "phone-placeholder": "+62 822 0822 0822",
+    "subject": "Subject",
+    "subject-placeholder": "Web Development",
+    "message": "Message",
+    "message-placeholder": "Type your message here",
+    "send-message": "Send Message",
+    "success-message": "Your message has been sent successfully!",
+    "error-message": "There was an error sending your message. Please try again.",
+    "unsubscribe": "Unsubscribe",
+    "copyright": "Copyright",
+    "all-rights-reserved": "All rights reserved."
+  }
+}

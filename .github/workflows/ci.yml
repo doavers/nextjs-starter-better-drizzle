@@ -1,0 +1,113 @@
+name: Continuous Integration
+
+# This is trigger CI on all kinds of branches and PRs
+on:
+  push:
+    branches:
+      - "**" # all branches
+      - "!dependabot/**" # exclude dependbot branches
+  # pull_request:
+  # workflow_dispatch: # Manually run the workflow only on main branch
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  next-build:
+    # if: ${{ github.event_name == 'workflow_dispatch' }} # Run only if triggered manually
+    runs-on: ubuntu-latest
+    container: node:lts # Use node LTS container version, same as Dockerfile base image
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Checkout the code
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "22.20.0"
+
+      - name: "Create env file"
+        run: |
+          touch .env
+          echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the app
+        run: npm run build
+
+      - name: Upload Next build # Upload the artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            .next
+            public
+          retention-days: 7 # artifact retention duration, can be upto 30 days
+
+  docker-push:
+    needs: next-build
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Checkout the code
+
+      - name: Download next build # Download the above uploaded artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+
+      - name: "Create env file"
+        run: |
+          touch .env
+          echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: "Get metadata info"
+        run: |
+          echo "env.REGISTRY: ${{ env.REGISTRY }}"
+          echo "env.IMAGE_NAME: ${{ env.IMAGE_NAME }}"
+          echo "steps.meta.outputs.tags: ${{ steps.meta.outputs.tags }}"
+          echo "steps.meta.outputs.labels: ${{ steps.meta.outputs.labels }}"
+
+      - name: Build and Push Docker Images
+        run: |
+          export CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
+          echo "CURRENT_BRANCH: $CURRENT_BRANCH"
+          export TAG=$([[ $CURRENT_BRANCH == "main" ]] && echo "latest" || echo $CURRENT_BRANCH)
+          echo "TAG: $TAG"
+          export GITHUB_REF_IMAGE=ghcr.io/$GITHUB_REPOSITORY:$GITHUB_SHA
+          echo "GITHUB_REF_IMAGE: $GITHUB_REF_IMAGE"
+          export GITHUB_BRANCH_IMAGE=ghcr.io/$GITHUB_REPOSITORY:$TAG
+          echo "GITHUB_BRANCH_IMAGE: $GITHUB_BRANCH_IMAGE"
+          export GITHUB_BRANCH_IMAGE=ghcr.io/$GITHUB_REPOSITORY:$TAG
+          echo "GITHUB_BRANCH_IMAGE: $GITHUB_BRANCH_IMAGE"
+          docker build -f Dockerfile -t $GITHUB_REF_IMAGE -t $GITHUB_BRANCH_IMAGE .
+          echo "docker build -f Dockerfile -t $GITHUB_REF_IMAGE -t $GITHUB_BRANCH_IMAGE ."
+          echo "Pushing Image to GitHub Container Registry"
+          docker push $GITHUB_REF_IMAGE
+          docker push $GITHUB_BRANCH_IMAGE
