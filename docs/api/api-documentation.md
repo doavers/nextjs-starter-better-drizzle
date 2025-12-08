@@ -2,16 +2,18 @@
 
 ## Overview
 
-This document provides comprehensive documentation for all REST API endpoints in the NextJS starter template, including authentication, user management, and data operations.
+This document provides comprehensive documentation for all REST API endpoints in the NextJS starter template with Better Auth v1.4+ and Drizzle ORM v0.45+, including authentication, user management, organization management, and data operations.
 
 ## API Architecture
 
 ### Base Configuration
 
 - **Base URL**: `https://yourdomain.com/api/v1`
+- **Framework**: Next.js 16 with App Router
+- **Database**: PostgreSQL with Drizzle ORM
+- **Authentication**: Better Auth v1.4+ (JWT + Session Cookies)
 - **Protocol**: HTTPS
 - **Content-Type**: `application/json`
-- **Authentication**: Bearer Token (JWT) + Session Cookies
 
 ### Response Format
 
@@ -1210,7 +1212,7 @@ curl -X POST https://yourdomain.com/api/v1/users \
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
 **API Version**: v1.0
-**Next Review**: January 31, 2026
+**Next Review**: January 31, 2025

@@ -2,14 +2,14 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for setting up the development environment for the NextJS starter template with Better Auth and Drizzle ORM.
+This guide provides comprehensive instructions for setting up the development environment for the NextJS starter template with Better Auth v1.4+ and Drizzle ORM v0.45+ integration.
 
 ## Prerequisites
 
 ### System Requirements
 
-- **Node.js**: 18.17.0 or higher
-- **npm**: 9.0.0 or higher (or yarn 1.22.0+)
+- **Node.js**: 18.17.0 or higher (19+ recommended)
+- **npm**: 9.0.0 or higher
 - **PostgreSQL**: 14.0 or higher
 - **Git**: 2.30.0 or higher
 - **Operating System**: Windows 10+, macOS 12+, or Linux (Ubuntu 20.04+)
@@ -17,8 +17,8 @@ This guide provides comprehensive instructions for setting up the development en
 ### Recommended Development Tools
 
 - **IDE**: Visual Studio Code (with recommended extensions)
-- **Database Tool**: TablePlus, DBeaver, or pgAdmin
-- **API Testing**: Postman or Insomnia
+- **Database Tool**: TablePlus, DBeaver, or Drizzle Studio
+- **API Testing**: Postman, Insomnia, or built-in DevTools
 - **Git GUI**: GitKraken, SourceTree, or built-in VS Code Git
 
 ## Quick Start
@@ -26,7 +26,7 @@ This guide provides comprehensive instructions for setting up the development en
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/nextjs-starter-better-drizzle.git
+git clone https://github.com/doavers/nextjs-starter-better-drizzle.git
 cd nextjs-starter-better-drizzle
 ```
 
@@ -34,8 +34,7 @@ cd nextjs-starter-better-drizzle
 
 ```bash
 npm install
-# or
-yarn install
+# This installs ~200+ packages including Next.js 16, React 19, Better Auth 1.4+, Drizzle ORM 0.45+
 ```
 
 ### 3. Environment Configuration
@@ -44,9 +43,9 @@ yarn install
 # Copy environment template
 cp .env.example .env
 
-# Edit the environment file
-nano .env
-# or use your preferred editor
+# Edit the environment file with your configuration
+# Required: DATABASE_URL, AUTH_SECRET, AUTH_URL
+# Optional: Google OAuth, Resend API, reCAPTCHA
 ```
 
 ### 4. Database Setup
@@ -55,20 +54,21 @@ nano .env
 # Create PostgreSQL database
 createdb nextjs_starter
 
-# Run database migrations
-npm run db:migrate
+# Push schema to database (no migrations needed for initial setup)
+npm run db:push
 
-# (Optional) Seed with sample data
-npm run db:seed
+# Open Drizzle Studio to explore the database
+npm run db:studio
 ```
 
 ### 5. Start Development Server
 
 ```bash
+# Starts with Turbopack for faster development
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to see the application.
+Visit [http://localhost:3000](http://localhost:3000) to see the application running with hot reload.
 
 ## Detailed Setup Instructions
 
@@ -77,51 +77,41 @@ Visit [http://localhost:3000](http://localhost:3000) to see the application.
 #### Required Environment Variables
 
 ```bash
-# Database Configuration
+# Database Configuration (PostgreSQL)
 DATABASE_URL="postgresql://username:password@localhost:5432/nextjs_starter"
-DB_SSL=false
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=nextjs_starter
-DB_USER=username
-DB_PASSWORD=password
 
-# Authentication Configuration
-BETTER_AUTH_SECRET="your-super-secret-key-here"
-BETTER_AUTH_URL="http://localhost:3000"
+# Better Auth Configuration
+AUTH_SECRET="your-super-secret-key-32-chars-minimum"
+AUTH_URL="http://localhost:3000"
 
-# Google OAuth (Optional)
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-
-# Email Configuration (Resend)
-RESEND_API_KEY="your-resend-api-key"
-RESEND_FROM_EMAIL="noreply@yourdomain.com"
-
-# Application Configuration
+# Application URL
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-nextauth-secret"
-NEXTAUTH_URL="http://localhost:3000"
 ```
 
 #### Optional Environment Variables
 
 ```bash
+# Google OAuth (Social Authentication)
+AUTH_GOOGLE_ID="your-google-oauth-client-id"
+AUTH_GOOGLE_SECRET="your-google-oauth-client-secret"
+
+# Email Configuration (Resend)
+RESEND_API_KEY="re_your_resend_api_key"
+RESEND_FROM_EMAIL="noreply@yourdomain.com"
+
+# reCAPTCHA (Google reCAPTCHA v2)
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY="6LeIxAcTAAAAAJcZVRqyHh71UMIEbQjYy6"
+RECAPTCHA_SECRET_KEY="6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+
 # Development
 NODE_ENV="development"
-LOG_LEVEL="debug"
 
-# Feature Flags
-ENABLE_SIGNUP=true
-ENABLE_SOCIAL_AUTH=true
-ENABLE_EMAIL_VERIFICATION=true
+# Internationalization
+NEXT_PUBLIC_DEFAULT_LOCALE="en"
 
-# Analytics (Optional)
-GOOGLE_ANALYTICS_ID="your-ga-id"
-
-# File Upload
-UPLOAD_DIR="./uploads"
-MAX_FILE_SIZE="5242880"  # 5MB in bytes
+# File Upload Configuration
+UPLOAD_DIR="./public/uploads"
+MAX_FILE_SIZE="10485760"  # 10MB in bytes
 ```
 
 ### Database Setup
@@ -162,23 +152,20 @@ docker run --name postgres-dev \
   -d postgres:15
 ```
 
-#### Database Migration
+#### Database Management with Drizzle
 
 ```bash
-# Generate new migration
-npm run db:generate
+# Generate migration files from schema changes
+npx drizzle-kit generate
 
-# Run migrations
-npm run db:migrate
+# Push schema changes directly to database (development)
+npm run db:push
 
-# Check migration status
-npm run db:status
+# Open Drizzle Studio for database management
+npm run db:studio
 
-# Rollback migration
-npm run db:rollback
-
-# Drop and recreate database (development only)
-npm run db:reset
+# Drop and recreate all tables (development only)
+npx drizzle-kit drop
 ```
 
 ### Development Scripts
@@ -187,49 +174,42 @@ npm run db:reset
 
 ```json
 {
-  "dev": "next dev",
+  "dev": "next dev --turbopack -p 3000",
   "build": "next build",
-  "start": "next start",
+  "start": "next start -p 3000",
   "lint": "next lint",
   "lint:fix": "next lint --fix",
-  "type-check": "tsc --noEmit",
-  "db:generate": "drizzle-kit generate",
-  "db:migrate": "drizzle-kit migrate",
-  "db:push": "drizzle-kit push",
-  "db:studio": "drizzle-kit studio",
-  "db:seed": "tsx src/lib/seed.ts",
-  "test": "jest",
-  "test:watch": "jest --watch",
-  "test:coverage": "jest --coverage",
-  "prepare": "husky install"
+  "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
+  "format": "prettier --write .",
+  "format:check": "prettier --check .",
+  "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
+  "prepare": "husky",
+  "postinstall": "drizzle-kit generate --config drizzle.config.ts"
 }
 ```
 
 #### Development Commands
 
 ```bash
-# Start development server with hot reload
+# Start development server with Turbopack (faster builds)
 npm run dev
 
 # Build for production
 npm run build
 
 # Start production server
-npm start
+npm run start
 
-# Run linting
-npm run lint
-
-# Fix linting issues automatically
-npm run lint:fix
-
-# Type checking
-npm run type-check
+# Code quality and formatting
+npm run lint          # Run ESLint
+npm run lint:fix       # Fix ESLint issues automatically
+npm run format         # Format code with Prettier
+npm run format:check   # Check code formatting
 
 # Database operations
-npm run db:studio    # Open Drizzle Studio
-npm run db:push      # Push schema changes to database
-npm run db:seed      # Seed database with sample data
+npm run db:studio      # Open Drizzle Studio
+npm run db:push        # Push schema to database
+npm run postinstall    # Generate database schema (auto-run after npm install)
 ```
 
 ## Development Workflow
@@ -653,6 +633,6 @@ npm list --depth=0
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Next Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Next Review**: January 31, 2025

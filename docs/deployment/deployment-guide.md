@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for deploying the NextJS starter template to various hosting platforms, including production, staging, and development environments.
+This guide provides comprehensive instructions for deploying the NextJS starter template with Better Auth v1.4+ and Drizzle ORM v0.45+ to various hosting platforms, including production, staging, and development environments.
 
 ## Deployment Architecture
 
@@ -917,6 +917,6 @@ LIMIT 10;
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Next Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Next Review**: January 31, 2025

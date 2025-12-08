@@ -2,16 +2,17 @@
 
 ## Overview
 
-This document provides comprehensive documentation for the database schema used in the NextJS starter template, including table structures, relationships, constraints, and data flow.
+This document provides comprehensive documentation for the database schema used in the NextJS starter template with Better Auth v1.4+ and Drizzle ORM v0.45+, including table structures, relationships, constraints, and data flow.
 
 ## Database Architecture
 
 ### Technology Stack
 
 - **Database**: PostgreSQL 15+
-- **ORM**: Drizzle ORM 0.44+
-- **Migration Tool**: Drizzle Kit
+- **ORM**: Drizzle ORM v0.45+
+- **Migration Tool**: Drizzle Kit v0.31+
 - **Connection Pooling**: Built-in PostgreSQL pool
+- **Authentication**: Better Auth integrated schema
 
 ### Design Principles
 
@@ -967,6 +968,6 @@ PUBLICATION nextjs_pub;
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Next Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Next Review**: January 31, 2025

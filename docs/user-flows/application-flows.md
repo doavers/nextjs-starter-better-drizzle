@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the complete user flows within the application, including dashboard navigation, user management, data operations, and feature interactions.
+This document outlines the complete user flows within the NextJS starter application with Better Auth v1.4+ and Drizzle ORM v0.45+, including dashboard navigation, user management, data operations, and feature interactions.
 
 ## Application Flow Summary
 
@@ -676,6 +676,6 @@ interface FeedbackPatterns {
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Next Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Next Review**: January 31, 2025

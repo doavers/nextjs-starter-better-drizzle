@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the complete authentication flows within the application, including user registration, login, logout, password reset, and social authentication processes.
+This document outlines the complete authentication flows within the NextJS starter application with Better Auth v1.4+, including user registration, login, logout, password reset, social authentication, and multi-tenant organization management processes.
 
 ## Authentication Flow Summary
 
@@ -574,6 +574,6 @@ interface UserFeedback {
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Next Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Next Review**: January 31, 2025

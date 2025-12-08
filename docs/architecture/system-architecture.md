@@ -12,7 +12,7 @@ This document outlines the complete system architecture of the NextJS starter te
 ┌─────────────────────────────────────────────────────────────┐
 │                    Frontend Architecture                     │
 ├─────────────────────────────────────────────────────────────┤
-│ React 18 + Next.js 16 (App Router)                          │
+│ React 19 + Next.js 16 (App Router)                          │
 │ ├── Route Groups: (main), (auth), (dashboard), (protected) │
 │ ├── Server Components (RSC)                                 │
 │ ├── Client Components                                        │
@@ -527,6 +527,6 @@ erDiagram
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: October 31, 2025
-**Architecture Review**: January 31, 2026
+**Document Version**: 1.1
+**Last Updated**: December 8, 2024
+**Architecture Review**: January 31, 2025
