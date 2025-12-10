@@ -76,13 +76,13 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
       ref={setNodeRef}
       style={style}
       className={cn(
-        "pt-0 pb-6",
+        "py-0 pt-0 pb-6",
         variants({
           dragging: isOverlay ? "overlay" : isDragging ? "over" : undefined,
         }),
       )}
     >
-      <CardHeader className="space-between flex flex-row items-center border-b-2 p-4 text-left font-semibold">
+      <CardHeader className="space-between flex flex-row items-center gap-6 border-b-2 p-4 text-left font-semibold">
         <Button
           variant={"ghost"}
           {...attributes}
@@ -92,11 +92,8 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
           <span className="sr-only">{`Move column: ${column.title}`}</span>
           <GripVerticalIcon />
         </Button>
-        {/* <span className="mr-auto mt-0!"> {column.title}</span> */}
-        {/* <Input
-          defaultValue={column.title}
-          className="text-base mt-0! mr-auto"
-        /> */}
+        {/* <span className="mt-0! mr-auto"> {column.title}</span> */}
+        {/* <Input defaultValue={column.title} className="mt-0! mr-auto text-base" /> */}
         <ColumnActions id={column.id} title={column.title} />
       </CardHeader>
       <CardContent className="flex grow flex-col gap-4 overflow-x-hidden p-2">

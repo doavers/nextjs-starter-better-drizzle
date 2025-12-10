@@ -1,14 +1,13 @@
 "use client";
 
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
+import { ChartAreaInteractive } from "@/components/dashboard/default/chart-area-interactive";
+import { DataTable } from "@/components/dashboard/default/data-table";
+import { SectionCards } from "@/components/dashboard/default/section-cards";
 import { NoOrganizationSuggestion } from "@/components/organization/no-organization-suggestion";
 import { UserRole } from "@/config/role-config";
 import { useOrganizationContext } from "@/hooks/use-organization-context";
 import { useSession } from "@/lib/auth-client";
-
-import { ChartAreaInteractive } from "./_components/chart-area-interactive";
-import { DataTable } from "./_components/data-table";
-import { SectionCards } from "./_components/section-cards";
 
 export default function Page() {
   const { currentOrganization, isLoading } = useOrganizationContext();

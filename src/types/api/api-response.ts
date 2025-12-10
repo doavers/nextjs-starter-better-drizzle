@@ -2,7 +2,7 @@ export interface APIResponse {
   traceId: string;
   code: string;
   message: string;
-  data?: unknown;
+  data: unknown;
   hostId?: string;
   responseAt?: string;
   timeConsume?: number;

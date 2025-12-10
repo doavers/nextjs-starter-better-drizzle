@@ -199,6 +199,7 @@ export async function GET(request: NextRequest) {
         traceId,
         code: "02",
         message: "Failed to fetch dashboard statistics",
+        data: null,
         responseTime: Date.now() - startTime,
       } as APIResponse,
       { status: 500 },

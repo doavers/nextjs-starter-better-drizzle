@@ -114,6 +114,7 @@ export function LayoutControls(props: LayoutControlsProps) {
                 variant="outline"
                 type="single"
                 value={variant}
+                defaultValue="sidebar"
                 onValueChange={(value) => handleValueChange("sidebar_variant", value)}
               >
                 <ToggleGroupItem className="text-xs" value="inset" aria-label="Toggle inset">

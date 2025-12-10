@@ -141,6 +141,9 @@ export default function UserForm({ initialData, pageTitle }: { initialData: User
                         <Input placeholder="Enter full name" {...field} disabled={loading} />
                       </FormControl>
                       <FormMessage />
+                      {isEditing && (
+                        <p className="text-muted-foreground text-sm">Name can be changed after account creation.</p>
+                      )}
                     </FormItem>
                   )}
                 />

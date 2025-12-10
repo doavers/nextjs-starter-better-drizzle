@@ -9,9 +9,9 @@ import { Badge } from "@/components/ui/badge";
 import UserType from "@/types/common/user-type";
 
 import { CellAction } from "./cell-action";
-import { ROLE_OPTIONS } from "./options";
+import { ROLE_OPTIONS, ActionMode } from "./options";
 
-export const columns: ColumnDef<UserType>[] = [
+export const createColumns = (mode: ActionMode = "normal"): ColumnDef<UserType>[] => [
   {
     accessorKey: "image",
     id: "avatar",
@@ -145,6 +145,9 @@ export const columns: ColumnDef<UserType>[] = [
   {
     id: "actions",
     header: "ACTIONS",
-    cell: ({ row }) => <CellAction data={row.original} />,
+    cell: ({ row }) => <CellAction data={row.original} mode={mode} />,
   },
 ];
+
+// Export a default columns function for backward compatibility
+export const columns = createColumns("normal");

@@ -226,13 +226,16 @@ export const getUsersAction = async ({
 };
 
 export const getUserByIdAction = async (traceId: string, id: string) => {
-  let currentTime = new Date().toISOString();
+  const startTime = Date.now();
+  let accessToken = "";
   let apiRes: APIResponse = {
     traceId,
     code: "99",
     message: API_CONFIG.responseMaping.find((item) => item.code === "99")?.message ?? "Unknown error occurred",
     data: null,
-  };
+    responseAt: Date.now().toLocaleString(),
+    timeConsume: Date.now() - startTime,
+  } as APIResponse;
 
   try {
     const session = await auth.api.getSession({
@@ -240,14 +243,38 @@ export const getUserByIdAction = async (traceId: string, id: string) => {
     });
 
     if (!session?.user.id) {
-      currentTime = new Date().toISOString();
-      apiRes = { ...apiRes, code: "02", message: "Not authenticated" } as APIResponse;
+      apiRes = {
+        traceId,
+        code: "02",
+        message: "Not authenticated",
+        data: null,
+        responseAt: Date.now().toLocaleString(),
+        timeConsume: Date.now() - startTime,
+      } as APIResponse;
+
       return apiRes;
     }
 
-    // Use session-based authentication instead of Bearer tokens
-    const cookies = await headers();
-    const cookieHeader = cookies.get("cookie")?.toString() || "";
+    if (session) {
+      const { token } = await auth.api.getToken({
+        headers: await headers(),
+      });
+
+      accessToken = token;
+    }
+
+    if (accessToken.length === 0) {
+      apiRes = {
+        traceId,
+        code: "02",
+        message: API_CONFIG.responseMaping.find((item) => item.code === "02")?.message ?? "Success",
+        data: [],
+        responseAt: Date.now().toLocaleString(),
+        timeConsume: Date.now() - startTime,
+      } as APIResponse;
+
+      return apiRes;
+    }
 
     const epUrl = `${API_CONFIG.backendURL}/v1/users/${id}`;
 
@@ -255,22 +282,34 @@ export const getUserByIdAction = async (traceId: string, id: string) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Cookie: cookieHeader,
+        Authorization: `Bearer ${accessToken}`,
       },
       credentials: "include",
     };
 
     const response = await fetch(epUrl, options);
     const result = await response.json();
-    currentTime = new Date().toISOString();
 
     if (result?.code !== "00") {
-      apiRes = { ...result, time: currentTime };
+      apiRes = {
+        traceId,
+        code: result?.code ?? "99",
+        message: API_CONFIG.responseMaping.find((item) => item.code === (result?.code ?? "99"))?.message ?? "Error",
+        data: result.data,
+        responseAt: Date.now().toLocaleString(),
+        timeConsume: Date.now() - startTime,
+      } as APIResponse;
+
       return apiRes;
     }
 
     apiRes = {
-      ...result,
+      traceId,
+      code: "00",
+      message: API_CONFIG.responseMaping.find((item) => item.code === "00")?.message ?? "Success",
+      data: result.data,
+      responseAt: Date.now().toLocaleString(),
+      timeConsume: Date.now() - startTime,
     } as APIResponse;
 
     return apiRes;

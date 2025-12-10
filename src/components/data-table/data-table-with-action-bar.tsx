@@ -15,7 +15,7 @@ export function DataTableWithActionBar<TData>({ table, actionBar, children }: Da
   return (
     <div className="flex flex-1 flex-col space-y-4">
       {children}
-      <div className="relative mx-4 flex flex-1 md:mx-6 lg:mx-8">
+      <div className="relative mx-4 flex flex-1">
         <div className="inset-0 flex overflow-hidden rounded-lg border">
           <ScrollArea className="h-full w-full">
             <Table>

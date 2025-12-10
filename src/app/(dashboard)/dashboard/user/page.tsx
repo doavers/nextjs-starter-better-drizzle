@@ -36,7 +36,7 @@ export default async function Page(props: pageProps) {
 
   return (
     <PageContainer scrollable={false}>
-      <div className="flex flex-1 flex-col space-y-6">
+      <div className="flex max-w-full flex-1 flex-col space-y-6">
         {/* Header Section */}
         <div className="flex items-start justify-between">
           <div className="space-y-1">
@@ -67,7 +67,7 @@ export default async function Page(props: pageProps) {
                 </div>
               }
             >
-              <div className="mx-2 md:mx-2 lg:mx-2">
+              <div className="mx-2 w-full md:mx-2 lg:mx-2">
                 <UserListingPage traceId={traceId} />
               </div>
             </Suspense>
