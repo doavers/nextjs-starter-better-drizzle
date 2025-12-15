@@ -28,7 +28,8 @@
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
     "prepare": "husky",
     "generate:presets": "ts-node --esm src/scripts/generate-theme-presets.ts",
-    "postinstall": "npx drizzle-kit generate --config drizzle.config.ts"
+    "db:generate": "drizzle-kit generate --config drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config drizzle.config.ts"
   },
   "husky": {
     "hooks": {
