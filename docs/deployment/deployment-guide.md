@@ -257,13 +257,13 @@ vercel --prod --sha <commit-hash>
 FROM node:18-alpine AS base
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install --only=production && npm cache clean --force
 
 # Build stage
 FROM base AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN npm install --force
 COPY . .
 RUN npm run build
 
@@ -576,7 +576,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --force
 
       - name: Run linting
         run: npm run lint
@@ -608,7 +608,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --force
 
       - name: Build application
         run: npm run build
