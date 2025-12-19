@@ -75,6 +75,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [];
   },
+  experimental: {},
 };
 
 export default withBundleAnalyzer(withNextIntl(nextConfig));
