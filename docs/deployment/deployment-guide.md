@@ -265,6 +265,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --force
 COPY . .
+RUN rm -f .env && cp .env.example .env
 RUN npm run build
 
 # Production stage

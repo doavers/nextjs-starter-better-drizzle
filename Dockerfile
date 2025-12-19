@@ -17,7 +17,7 @@ COPY src/db ./src/db/
 
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm install --force; \
+  elif [ -f package-lock.json ]; then npm ci; \
   elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
   else echo "Lockfile not found." && exit 1; \
   fi
@@ -72,6 +72,11 @@ COPY --from=builder /app/drizzle.config.ts ./drizzle.config.ts
 
 # Important to support DB migrations
 COPY --from=builder /app/drizzle ./drizzle
+
+RUN ls -lah
+
+COPY --from=builder /app/.env.example .env.example
+RUN rm -f .env && cp .env.example .env
 
 USER nextjs
 

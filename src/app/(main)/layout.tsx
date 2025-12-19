@@ -2,6 +2,8 @@ import "@/app/globals.css";
 import "@/styles/frontend/index.css";
 import "@/styles/frontend/prism-vsc-dark-plus.css";
 
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
@@ -67,6 +69,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <Footer />
               <ChatWidget />
               <ScrollToTop />
+
+              <Analytics />
+              <SpeedInsights />
             </div>
           </NextIntlClientProvider>
         </Providers>
