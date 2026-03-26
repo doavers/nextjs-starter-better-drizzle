@@ -1,0 +1,30 @@
+
+### Global Variables
+@baseUrl = http://localhost:3000
+@apiPrefix = /api/v1
+@authToken = <your_token_here>
+@productId = eewo7b1dy57ixeda9yy2bge5
+@organizationId = test
+@userId = test
+@email = test@gmail.com
+@orgId = test
+
+##################################################################
+# PRODUCT ROUTES
+##################################################################
+
+# @name getProducts
+GET {{baseUrl}}{{apiPrefix}}/products?page=1&limit=10&sort=price-high&minPrice=0
+Content-Type: application/json
+
+###
+
+# @name getProductById
+GET {{baseUrl}}{{apiPrefix}}/products/{{productId}}
+Content-Type: application/json
+
+###
+
+# @name getRelatedProducts
+GET {{baseUrl}}{{apiPrefix}}/products/{{productId}}/related
+Content-Type: application/json

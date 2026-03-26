@@ -12,14 +12,13 @@ export function proxy(req: NextRequest) {
   // authMiddleware
   authMiddleware(req);
 
-  const response = NextResponse.next({
+  // use this if response.headers.set("Content-Security-Policy", contentSecurityPolicyHeaderValue);
+
+  return NextResponse.next({
     request: {
       headers: requestHeaders,
     },
   });
-  // use this if response.headers.set("Content-Security-Policy", contentSecurityPolicyHeaderValue);
-
-  return response;
 }
 
 export const config = {
