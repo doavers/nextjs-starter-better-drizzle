@@ -1,0 +1,173 @@
+### Global Variables
+@baseUrl = http://localhost:3000
+@apiPrefix = /api/v1
+@authToken = <your_token_here>
+@productId = eewo7b1dy57ixeda9yy2bge5
+@organizationId = test
+@userId = test
+@email = test@gmail.com
+@orgId = test
+
+##################################################################
+# SYSTEM ROUTES
+##################################################################
+
+# @name healthCheck
+GET {{baseUrl}}/api/health
+Content-Type: application/json
+
+###
+
+# @name getRSS
+GET {{baseUrl}}/app/rss.xml
+Content-Type: application/json
+
+##################################################################
+# AUTH ROUTES
+##################################################################
+
+# @name login
+POST {{baseUrl}}{{apiPrefix}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "doavers@gmail.com",
+    "password": "password123"
+}
+
+###
+
+# @name register
+POST {{baseUrl}}{{apiPrefix}}/auth/register
+Content-Type: application/json
+
+{
+    "name": "New User",
+    "email": "newuser@example.com",
+    "password": "password123",
+    "role": "user"
+}
+
+###
+
+# @name logout
+POST {{baseUrl}}{{apiPrefix}}/auth/logout
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name resetPassword
+POST {{baseUrl}}{{apiPrefix}}/auth/reset
+Content-Type: application/json
+
+{
+    "email": "user@example.com"
+}
+
+###
+
+# @name newPassword
+POST {{baseUrl}}{{apiPrefix}}/auth/new-password
+Content-Type: application/json
+
+{
+    "token": "<reset_token>",
+    "password": "newpassword123"
+}
+
+##################################################################
+# CATEGORY ROUTES
+##################################################################
+
+# @name getCategories
+GET {{baseUrl}}{{apiPrefix}}/categories
+Content-Type: application/json
+
+##################################################################
+# ORGANIZATION ROUTES
+##################################################################
+
+# @name getOrganizations
+GET {{baseUrl}}{{apiPrefix}}/organizations?page=1&limit=10
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name createOrganization
+POST {{baseUrl}}{{apiPrefix}}/organizations
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "name": "New Organization",
+    "slug": "new-org",
+    "logo": null,
+    "metadata": {}
+}
+
+###
+
+# @name getOrganizationById
+GET {{baseUrl}}{{apiPrefix}}/organizations/{{organizationId}}
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name inviteToOrganization
+POST {{baseUrl}}{{apiPrefix}}/organizations/{{organizationId}}/invite
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "email": "invite@example.com",
+    "role": "member"
+}
+
+###
+
+# @name getOrganizationMembers
+GET {{baseUrl}}{{apiPrefix}}/organizations/{{organizationId}}/members
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+##################################################################
+# USER ROUTES
+##################################################################
+
+# @name getUsers
+GET {{baseUrl}}{{apiPrefix}}/users
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name getUserById
+GET {{baseUrl}}{{apiPrefix}}/users/{{userId}}
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name getUserByEmail
+GET {{baseUrl}}{{apiPrefix}}/users/email/{{email}}
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name switchOrganization
+POST {{baseUrl}}{{apiPrefix}}/users/switch-organization/{{orgId}}
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+##################################################################
+# DASHBOARD ROUTES
+##################################################################
+
+# @name getDashboardStats
+GET {{baseUrl}}{{apiPrefix}}/dashboard/stats
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
