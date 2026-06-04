@@ -14,7 +14,13 @@ const Footer = async () => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
             <div className="mb-10 w-full">
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
-                <Image src="/images/logo/logo-reverse.png" alt="logo" width={140} height={30} className="max-w-full" />
+                <Image
+                  src="/images/logo/logo-reverse.png"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                  style={{ width: "auto", height: "auto" }}
+                />
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-gray-300">{t("description")}</p>
               <div className="-mx-3 flex items-center">

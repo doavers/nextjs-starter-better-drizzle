@@ -39,17 +39,17 @@ const Hero = async () => {
           </div>
 
           <div className="w-full px-4">
-            <div className="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
-              <div className="">
-                <Image
-                  src="/images/hero/hero-image-sdlc.jpg"
-                  alt="hero"
-                  priority={false}
-                  className="mx-auto h-auto w-auto max-w-full rounded-t-xl rounded-tr-xl"
-                  width={845}
-                  height={316}
-                />
-              </div>
+            <div className="wow fadeInUp relative z-10 mx-auto h-[316px] max-w-[845px]" data-wow-delay=".25s">
+              <Image
+                src="/images/hero/hero-image-sdlc.jpg"
+                alt="hero"
+                priority
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
+                fill
+                sizes="(max-width: 845px) 100vw, 845px"
+                className="rounded-t-xl rounded-tr-xl object-contain"
+              />
               <div className="absolute bottom-0 -left-9 z-[-1]">
                 <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="gray" />
