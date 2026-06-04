@@ -31,17 +31,10 @@ const Header = () => {
   };
 
   // Sticky Navbar
-  const [sticky, setSticky] = useState(() => {
-    // Check if we're on the client side before accessing window
-    if (typeof window !== "undefined") {
-      return window.scrollY >= 80;
-    }
-    return false;
-  });
+  const [sticky, setSticky] = useState<boolean>(() => (typeof window !== "undefined" ? window.scrollY >= 80 : false));
 
   useEffect(() => {
     const handleStickyNavbar = () => setSticky(window.scrollY >= 80);
-
     window.addEventListener("scroll", handleStickyNavbar);
     return () => window.removeEventListener("scroll", handleStickyNavbar);
   }, []);

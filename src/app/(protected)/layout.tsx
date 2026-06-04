@@ -45,7 +45,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getLocale();
 
   return (
-    <html suppressHydrationWarning className="scroll-smooth!" lang={locale}>
+    <html suppressHydrationWarning className="scroll-smooth!" lang={locale} data-scroll-behavior="smooth">
       <head>
         {/* Google Analytics Script */}
         <Script

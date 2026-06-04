@@ -40,30 +40,34 @@ Welcome to the comprehensive documentation for the **NextJS Starter Template** w
 ## 🛠️ Technology Stack Overview
 
 ### Frontend Technologies
-- **Framework**: Next.js 16 (App Router)
-- **UI Library**: React 19
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS 4
+- **Framework**: Next.js 16.2.7 (App Router)
+- **UI Library**: React 19.2.7
+- **Language**: TypeScript 5.9.3
+- **Styling**: Tailwind CSS 4.3.0
 - **Components**: Radix UI primitives
-- **State Management**: Zustand + TanStack Query
-- **Forms**: React Hook Form + Zod
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
+- **State Management**: Zustand 5.0.14 + TanStack Query 5.101.0
+- **Forms**: React Hook Form 7.77.0 + Zod 4.4.3
+- **Animations**: Framer Motion 12.40.0
+- **Icons**: Lucide React 1.17.0
+- **Internationalization**: next-intl 4.13.0
 
 ### Backend Technologies
-- **Runtime**: Node.js 18+
-- **Database**: PostgreSQL
-- **ORM**: Drizzle ORM v0.45+
-- **Authentication**: Better Auth v1.4+
-- **Email**: Resend + React Email
-- **Validation**: Zod schemas
-- **Logging**: Winston
+- **Runtime**: Node.js 24+
+- **Database**: PostgreSQL with pg 8.21.0
+- **ORM**: Drizzle ORM 0.45.2 + Drizzle Kit 0.31.10
+- **Authentication**: Better Auth 1.6.14
+- **Email**: Resend 6.12.4 + React Email
+- **Validation**: Zod 4.4.3 schemas
+- **Logging**: Winston 3.19.0
+- **Monitoring**: OpenTelemetry SDK 0.218.0
 
 ### Development Tools
-- **Package Manager**: npm
-- **Code Quality**: ESLint 9, Prettier, Husky
-- **Testing**: Jest, React Testing Library (planned)
-- **Build Tools**: Turbopack, SWC
+- **Package Manager**: npm with package-lock.json
+- **Code Quality**: ESLint 9, Prettier 3.4.2, Husky 9.1.7
+- **Code Style**: Prettier plugin Tailwind CSS 0.8.0
+- **Git Hooks**: Husky with lint-staged
+- **Build Tools**: Turbopack (Next.js 16), SWC
+- **Analytics**: Vercel Analytics 2.0.1, Speed Insights 2.0.0
 
 ## 🎯 Key Features Documentation
 
@@ -96,7 +100,7 @@ Welcome to the comprehensive documentation for the **NextJS Starter Template** w
 
 ```bash
 # ✅ Prerequisites
-- Node.js 18+ installed
+- Node.js 24+ installed
 - PostgreSQL database running
 - Git for version control
 
@@ -127,10 +131,12 @@ const user: User = await getUserById(id);
 
 ### Version Information
 - Current Version: 0.1.0
-- Next.js: 16.0.7
-- React: 19.2.1
-- Better Auth: 1.4.5
-- Drizzle ORM: 0.45.0
+- Next.js: 16.2.7
+- React: 19.2.7
+- Better Auth: 1.6.14
+- Drizzle ORM: 0.45.2
+- TypeScript: 5.9.3
+- Node.js: 24+
 
 ## 🤝 Contributing to Documentation
 
@@ -150,7 +156,7 @@ We welcome contributions to improve the documentation:
 ---
 
 **Version**: 0.1.0
-**Last Updated**: December 8, 2024
-**Documentation Review**: January 31, 2025
+**Last Updated**: June 4, 2026
+**Next.js**: 16.2.7 | **React**: 19.2.7 | **Node.js**: 24+
 
 For the most recent updates, check the [GitHub repository](https://github.com/doavers/nextjs-starter-better-drizzle).
